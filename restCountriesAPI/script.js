@@ -16,8 +16,9 @@ function getCountriesHtml(country) {
             <div class="country-details">
                 <h3 class="country-name">${country.name}</h3>
                 <div class="country-detail">
-                    <p><strong>Population:</strong> ${country.population}</p>
+                    <p><strong>Native name:</strong> ${country.nativeName}</p>
                     <p class="region"><strong>Region:</strong> ${country.region}</p>
+                    <p class="region"><strong>Subregion:</strong> ${country.subregion}</p>
                     <p><strong>Capital:</strong> ${country.capital} </p>
                 </div>
             </div>
@@ -42,7 +43,7 @@ function searchCountry(e) {
 }
 
 function region(){
-  
+    if (data.map((country) => getCountriesHtml(country.Asia)).join(""));
 }
 
 function enableLightMode() {
@@ -56,18 +57,18 @@ function disabledLightMode() {
 getCountries().then((data) => {
   document.body.innerHTML = `
       <nav>
-      <h3> Where in the world? </h3>
+      <h3> Countries list with RestCountries API </h3>
       <button class="dark-mode-toggle">Dark Mode</button>
       </nav>
       <div class="sortContainer">
         <input id="searchCountry" type="text" placeholder="Search for a country..." />
         <select name="region" id="region-select">
             <option value="Region">Filter by Region</option>
-            <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asia">Asia</option>
-            <option value="Europe">Europe</option>
-            <option value="Oceania">Oceania</option>
+            <option class = 'Africa' value="Africa">Africa</option>
+            <option class = 'America' value="America">America</option>
+            <option class = 'Asia' value="Asia">Asia</option>
+            <option class = 'Europe' value="Europe">Europe</option>
+            <option class = 'Oceania' value="Oceania">Oceania</option>
         </select>
       </div>  
         <div class="countries">
