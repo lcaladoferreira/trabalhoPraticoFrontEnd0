@@ -71,7 +71,8 @@
   .flag {
     width: 300px;
     height: 200px;
-    display: space-between;
+    border: 10px solid;
+    border-color: var(--countrybackground);
   }
   
   .flag img {
@@ -86,7 +87,7 @@
     font-size: 0.85rem;
   }
   
-  .country-details h2 {
+  .country-name h2 {
     margin-top: 10;
     text-align: justify; 
   }

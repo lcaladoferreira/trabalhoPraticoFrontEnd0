@@ -15,7 +15,6 @@ function getCountriesHtml(country) {
             </div>
             <div class="country-details">
                 <h2 class="country-name">${country.name}</h2>
-           
                 <div class="country-detail">
                     <ul>
                     <li><p><strong>Native name:</strong> ${country.nativeName}</p></li>
@@ -23,8 +22,7 @@ function getCountriesHtml(country) {
                     <li><p class="region"><strong>Subregion:</strong> ${country.subregion}</p></li>
                     <li><p><strong>Capital:</strong> ${country.capital} </p></li>
                     </ul>
-                </div>
-               
+                </div>   
             </div>
         </div>
     
