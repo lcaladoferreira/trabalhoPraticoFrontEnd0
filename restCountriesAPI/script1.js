@@ -14,17 +14,13 @@ function getCountriesHtml(country) {
                 <img src="${country.flag}" alt="${country.name} flag" />
             </div>
             <div class="country-details">
-                <h2 class="country-name">${country.name}</h2>
-           
+                <h3 class="country-name">${country.name}</h3>
                 <div class="country-detail">
-                    <ul>
-                    <li><p><strong>Native name:</strong> ${country.nativeName}</p></li>
-                    <li><p class="region"><strong>Region:</strong> ${country.region}</p></li>
-                    <li><p class="region"><strong>Subregion:</strong> ${country.subregion}</p></li>
-                    <li><p><strong>Capital:</strong> ${country.capital} </p></li>
-                    </ul>
+                    <p><strong>Native name:</strong> ${country.nativeName}</p>
+                    <p class="region"><strong>Region:</strong> ${country.region}</p>
+                    <p class="region"><strong>Subregion:</strong> ${country.subregion}</p>
+                    <p><strong>Capital:</strong> ${country.capital} </p>
                 </div>
-               
             </div>
         </div>
     
@@ -61,7 +57,8 @@ function disabledLightMode() {
 getCountries().then((data) => {
   document.body.innerHTML = `
       <nav>
-      <button class="dark-mode-toggle" title="click here for change to Light Mode">Dark Mode</button>
+      <h3> Countries list with RestCountries API </h3>
+      <button class="dark-mode-toggle">Dark Mode</button>
       </nav>
       <div class="sortContainer">
         <input id="searchCountry" type="text" placeholder="Search for a country..." />
@@ -108,12 +105,10 @@ getCountries().then((data) => {
   document.querySelector(".dark-mode-toggle").addEventListener("click", () => {
     if (darkMode) {
       enableLightMode()
-    
-      document.querySelector(".dark-mode-toggle").textContent = "Click Here for Dark Mode"
+      document.querySelector(".dark-mode-toggle").textContent = "Light Mode"
       darkMode = false
     } else {
       disabledLightMode()
-
       document.querySelector(".dark-mode-toggle").textContent = "Dark Mode"
       darkMode = true
     }
