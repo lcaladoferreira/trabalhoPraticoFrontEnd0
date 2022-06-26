@@ -1,4 +1,32 @@
-div.country{
-
-    background-color: black;
-}
+.flag {
+    width: 300px;
+    height: 200px;
+    border: 10px solid;
+    position: relative;
+    display: inline-block;
+    transition: $trans;
+    transform-style: preserve-3d;
+    .flag, .country-details {
+      height: inherit;
+      width: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+    .flag {
+      background: var(--countrybackground); 
+      z-index: 2;
+    } 
+    .country-details {
+      background:var(--background);
+      transform: rotateY( $spinY );
+    }
+    &.flip { /* CSS to make element flip on click */
+      transform: rotateY( $spinY );
+    }
+    section{ /* Content Setup */
+      padding: 25px 10px;
+      color: #fff;
+    }
+  }

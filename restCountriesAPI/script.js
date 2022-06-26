@@ -11,11 +11,11 @@ function getCountriesHtml(country) {
     
         <div class="country">
             <div class="flag">
-                <img src="${country.flag}" alt="${country.name} flag" />
+                <img src="${country.flag}" title="${country.name}" alt="${country.name}" />
             </div>
             <div class="country-details">
-                <h2 class="country-name">${country.name}</h2>
-                <div class="country-detail">
+                <h2 class="country-name">${country.name} </h2>
+                <div>
                     <ul>
                     <li><p><strong>Native name:</strong> ${country.nativeName}</p></li>
                     <li><p class="region"><strong>Region:</strong> ${country.region}</p></li>
@@ -23,8 +23,8 @@ function getCountriesHtml(country) {
                     <li><p><strong>Capital:</strong> ${country.capital} </p></li>
                     </ul>
                 </div>   
+                </div>
             </div>
-        </div>
     
 `)
 }
