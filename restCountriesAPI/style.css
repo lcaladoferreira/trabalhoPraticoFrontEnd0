@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
-    width: 100%;    
+    border-radius: 3px;
+    
   }
   
   body {
     padding: auto;
     margin: 4px;
-    
   }
   
   :root {
@@ -56,8 +56,6 @@
     gap: 1.25em;
     background-color: var(--background);
     padding: 1em;
-    width: 100%;
-    height: 100%;
  
   }
   
@@ -68,17 +66,14 @@
     color: var(--text-color);
     height: 100%;
     box-shadow: 0px 0px 5px black;
-    width: 100%;
-    height: 100%;
   }
   
   
   .flag {
-    width: 100%;
-    height: 100%px;
+    width: 300px;
+    height: 200px;
     border: 10px solid;
     border-color: var(--countrybackground);
-    
   }
   
   .flag img {
@@ -86,7 +81,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.3em;
-    
   }
   
   
@@ -94,7 +88,11 @@
   .country-details {
     padding: 1.25em 1em;
     font-size: 0.85rem;
-    
+  }
+  
+  .country-name h2 {
+    margin-top: 10;
+    text-align: justify; 
   }
   
   .country-detail p {
@@ -109,7 +107,7 @@
     width: 100%;
     height: 100%;
     text-align: justify center;
-    font-size: 1.00rem;
+    font-size: 1.85rem;
 
   }
   .Africa {
