@@ -17,10 +17,10 @@ function getCountriesHtml(country) {
                 </div>
                 <div class="country-name">
                     <ul>
-                    <li><p><strong>Name:</strong> >${country.name} </li>
+                    <li><p><strong>Name:</strong> ${country.name} </li>
                     <li><p><strong>Native name:</strong> ${country.nativeName}</p></li>
-                    <li><p <strong>class="region"><strong>Region:</strong> ${country.region}</p></li>
-                    <li><p <strong>class="region"><strong>Subregion:</strong> ${country.subregion}</p></li>
+                    <li><p <strong>>Region:</strong> ${country.region}</p></li>
+                    <li><p <strong>Subregion:</strong> ${country.subregion}</p></li>
                     <li><p><strong>Capital:</strong> ${country.capital} </p></li>
                     </ul>
                 </div>   
